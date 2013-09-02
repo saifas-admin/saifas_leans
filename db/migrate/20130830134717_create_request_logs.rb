@@ -2,7 +2,7 @@ class CreateRequestLogs < ActiveRecord::Migration
 
   def change
     create_table :request_logs do |column|
-    	  column.integer  :user_id,    :null => false
+	column.integer  :user_id,    :null => false
       	column.string   :url,        :null => false
       	column.string   :remote_ip,  :null => false
       	column.string   :format,     :null => false

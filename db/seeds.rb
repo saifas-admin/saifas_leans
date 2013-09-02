@@ -1,5 +1,5 @@
 Lean.create({
-	:id            => 1,
+    :id            => 1,
     :name          => 'Home',
     :short_name    => 'home',
     :description   => '',

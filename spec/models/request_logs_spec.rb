@@ -9,13 +9,13 @@ describe RequestLogs do
 
   fixtures :request_logs
 
-	before(:each) do
-		@requestlog = RequestLogs.new(valid_log_hash)
-	end
+  before(:each) do
+	@requestlog = RequestLogs.new(valid_log_hash)
+  end
   
   it "should has :user_id == 2" do
-  	@requestlog.user_id = 0
-  	@requestlog.should_not be_valid
+    @requestlog.user_id = 0
+    @requestlog.should_not be_valid
     @requestlog.user_id = 2
     @requestlog.should be_valid
   end
