@@ -7,15 +7,10 @@ end
 
 describe JsonHelper do
 
-	fixtures :leans
+    let(:lean) { FactoryGirl.create :lean }
 
-  	it "should has valid lean_to_json method" do
-  		@lean = Lean.first(:conditions => {:id => 1})
-  		lean_to_json(@lean).should be_eql(results[:id1])
-  		@lean = Lean.first(:conditions => {:id => 2})
-  		lean_to_json(@lean).should be_eql(results[:id2])
-  		@lean = Lean.first(:conditions => {:id => 3})
-  		lean_to_json(@lean).should be_eql(results[:id3])
+  	it "lean_to_json(:lean)" do
+  		lean_to_json(lean).should be_eql(results(lean.id))
   	end
 
 end

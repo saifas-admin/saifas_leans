@@ -5,6 +5,8 @@ gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'fuubar'
+  gem 'factory_girl_rails'
 end
 
 gem 'mongrel', 	'>= 1.2.0.pre2'
