@@ -8,6 +8,9 @@ group :development, :test do
   gem 'fuubar'
   gem 'factory_girl_rails'
   gem 'fakeweb'
+  gem 'capybara'
+  gem 'rspec-html-matchers'
+  gem 'selenium-webdriver'
 end
 
 gem 'mongrel', 	'>= 1.2.0.pre2'

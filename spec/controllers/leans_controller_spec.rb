@@ -11,8 +11,9 @@ describe LeansController do
 
   context "routes" do
 
-    it "'/' to {:controller => leans, :action => show}" do
-      expect(:get => '/').to route_to({:controller => 'leans', :action => 'show'})
+    it "'/' to {:controller => leans, :action => show, :id => '1'}" do
+      expect(:get => '/').to route_to({:controller => 'leans', 
+                                                :action => 'show', :id => 1})
     end
 
     it "'/leans/:id' to {:controller => leans, :action => show, :id => id}" do
@@ -28,6 +29,11 @@ describe LeansController do
 
     it 'responds with 200' do
       expect(response).to be_success
+    end
+
+    it "responds with 404 if lean.nil?" do
+      get 'show', :id => 0
+      expect(response).to be_not_found
     end
 
     it "returns valid json" do
