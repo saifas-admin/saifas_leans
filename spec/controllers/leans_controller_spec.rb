@@ -36,9 +36,8 @@ describe LeansController do
     end
 
     it "makes request_log" do
-      get 'show', :id => 1, :format => :json
-      log = RequestLogs.last
-      expect(log).to be_same(logs)
+      get 'show', :id => lean.id, :format => :json
+      expect(RequestLogs.last).to be_same(logs)
     end
 
   end

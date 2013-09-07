@@ -10,4 +10,4 @@ When the application get request, it will insert to request log in database a re
 
 Development is carried out with the use of a paradigm TDD.
 
-There is RSpec-tests for controller, models and helper.
+There is RSpec-tests for controller, models, external resource, decorator and helper.
